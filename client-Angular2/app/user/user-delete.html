@@ -1,0 +1,16 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="$hide()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>Are you sure you want to do this?</h4>
+            </div>
+            <div class="modal-footer" (click)="$hide()">
+                <button type="button" class="btn btn-default" (click)="deleteUser(user._id)">OK</button>
+                <button type="button" class="btn btn-primary" (click)="$hide()">CANCEL</button>
+            </div>
+        </div>
+    </div>
+</div>
