@@ -30,10 +30,7 @@ export class UserListComponent {
                      .then(
                        users => { 
                          this.totalUsers = users.count;
-                        //  let user = users.users;
-                        //  console.log(user);
-                         users.users.forEach((user:any) => {console.log(user); this.users.push(user)});
-                         //this.users.push(user) 
+                         users.users.forEach((user:any) => {this.users.push(user)});
                         },
                        error =>  this.errorMessage = <any>error);
   }
