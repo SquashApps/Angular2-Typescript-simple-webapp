@@ -7,8 +7,17 @@ CLIENT (Angular2) <--------->  SERVER (Nodejs) <--------->   DATABASE (Mongodb)
 <h3>Pre-requisite</h3>
 Install mongodb, npm, node, typescript globally
 
-<h3>Steps to execute the project </h3>
+<h3>Steps to execute the web app </h3>
 1. Open terminal
 2. Run mongodb
 3. cd server-nodejs , npm install , node app.js
 4. cd client-Angular2 , npm install , npm start
+
+<h3>Mobile App</h3>
+I have created mobile app for the same app with ionic 2.
+
+<h3>Steps to execute the mobile app </h3>
+1. Open terminal
+2. Run mongodb
+3. cd server-nodejs , npm install , node app.js
+4. cd MobileApp-Ionic2 , npm install , ionic serve
