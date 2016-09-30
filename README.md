@@ -1,22 +1,25 @@
-# Angular2-Typescript-simple-webapp
-This is a simple webapp which includes the major concepts of angular2 like components, services, form validation, dependency injection, routing, connecting to nodejs server etc.
+# Angular2-Ionic2-Typescript-simple-web-and-mobile-app
+This is a simple app which includes the major concepts of angular2 like components, services, form validation, dependency injection, routing, connecting to nodejs server etc. It also covers the important topics in ionic2.
 
-<h3>Architecture</h3> 
+## Architecture 
+<h3> WebApp </h3>
 CLIENT (Angular2) <--------->  SERVER (Nodejs) <--------->   DATABASE (Mongodb)
+<h3> MobileApp </h3>
+CLIENT (Ionic2) <--------->  SERVER (Nodejs) <--------->   DATABASE (Mongodb)
 
-<h3>Pre-requisite</h3>
-Install mongodb, npm, node, typescript globally
+## Pre-requisite
+Install mongodb, npm, node, typescript, ionic, cordova globally
 
-<h3>Steps to execute the web app </h3>
+## Steps to execute the web app
 1. Open terminal
 2. Run mongodb
 3. cd server-nodejs , npm install , node app.js
 4. cd client-Angular2 , npm install , npm start
 
-<h3>Mobile App</h3>
+## Mobile App
 I have created mobile app for the same app with ionic 2.
 
-<h3>Steps to execute the mobile app </h3>
+## Steps to execute the mobile app 
 1. Open terminal
 2. Run mongodb
 3. cd server-nodejs , npm install , node app.js
