@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Grid View</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding-10>
+    <ion-card *ngFor="let user of users; let i=index">
+        <ion-card-header>
+            User {{i+1}}
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    Id : {{user._id}}
+                </ion-item>
+                <ion-item>
+                    User Name : {{user.userName}}
+                </ion-item>
+                <ion-item>
+                    Display Name : {{user.displayName}}
+                </ion-item>
+                <ion-item>
+                    Email : {{user.emailId}}
+                </ion-item>
+            </ion-list>
+            <ion-icon padding ios="ios-trash" md="md-trash" color="danger" (click)="deleteUser(user._id)"></ion-icon>
+            <ion-icon padding ios="ios-brush" md="md-brush" color="secondary" (click)="editUser(user._id)"></ion-icon>
+        </ion-card-content>
+    </ion-card>
+    <ion-infinite-scroll *ngIf="users.length<totalUsers" (ionInfinite)="pushUsers($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
