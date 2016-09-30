@@ -5,8 +5,6 @@ import { AlertController } from 'ionic-angular';
 import { User }           from '../userServices/user';
 import { UserService }           from '../userServices/userService';
 import { EditUser }           from '../edit-user/edit-user';
-import { GridView } from '../grid-view/grid-view';
-import { ListView } from '../list-view/list-view';
 
 @Component({
   templateUrl: 'home.html'

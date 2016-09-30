@@ -14,7 +14,7 @@ export class MyApp {
 
   rootPage: any = Tabs;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: Component}>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
