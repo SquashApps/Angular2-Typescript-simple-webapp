@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Add User</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <form (ngSubmit)="addUser(userAddForm.value)" #userAddForm="ngForm">
+        <ion-list inset>
+            <ion-item>
+                <ion-input type="text" placeholder="User Name" name="userName" (ngModel)="user.userName" #userName="ngModel" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Display Name" name="displayName" (ngModel)="user.displayName" #displayName="ngModel" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="email" placeholder="Email Id" name="emailId" (ngModel)="user.emailId" #emailId="ngModel" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="password" placeholder="Password" name="password" (ngModel)="user.password" #password="ngModel" required></ion-input>
+            </ion-item>
+        </ion-list>
+        <button type="submit" ion-button color="secondary" [disabled]="!userAddForm.form.valid" medium round padding>Submit</button>
+        <button type="button" ion-button color="danger" (click)="userAddForm.reset()" medium round padding>Cancel</button>
+    </form>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>List View</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding-10>
+    <ion-list *ngFor="let user of users; let i=index" style="margin:0px">
+        <ion-item-sliding>
+            <ion-item>
+                <ion-icon name="person" item-left></ion-icon>
+                <h2>User Name : {{user.userName}}</h2>
+                <h3>Display Name : {{user.displayName}}</h3>
+                <h4>Email : {{user.emailId}}</h4>
+            </ion-item>
+            <ion-item-options side="right">
+                <button secondary (click)="editUser(user._id)">
+                  <ion-icon ios="ios-brush" md="md-brush"></ion-icon>
+                  Edit
+                </button>
+                <button danger (click)="deleteUser(user._id)">
+                  <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+                  Delete
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+    <ion-infinite-scroll *ngIf="users.length<totalUsers" (ionInfinite)="pushUsers($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
